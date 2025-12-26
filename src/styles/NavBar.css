@@ -1,0 +1,40 @@
+header {
+  width: 100%;
+  background: #28574e;
+  height: 650px;
+  max-height: 100%;
+}
+.navbar {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+  justify-content: end;
+}
+.navbar .logo {
+  width: 120px;
+  height: auto;
+  margin-right: auto;
+  border-radius: 20%;
+}
+.navbar a {
+  color: #f2f2f2;
+  margin-left: 60px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: black;
+}
+.foto-karla {
+  display: flex;
+  justify-content: center;
+  margin-top: 125px;
+}
+.foto-karla img {
+  border-radius: 10px;
+  width: 600px;
+  margin-top: 125px;
+  border: 15px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 40px 246px 0 rgba(0, 0, 0, 0.1);
+}
