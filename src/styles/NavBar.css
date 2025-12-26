@@ -1,40 +1,89 @@
-header {
+.header {
   width: 100%;
-  background: #28574e;
-  height: 650px;
-  max-height: 100%;
-}
-.navbar {
-  display: flex;
-  padding: 40px;
-  gap: 40px;
-  justify-content: end;
-}
-.navbar .logo {
-  width: 120px;
-  height: auto;
-  margin-right: auto;
-  border-radius: 20%;
-}
-.navbar a {
-  color: #f2f2f2;
-  margin-left: 60px;
-  text-decoration: none;
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--primary-dark) 100%
+  );
 }
 
-.navbar a:hover {
-  color: black;
-}
-.foto-karla {
+.navbar {
   display: flex;
-  justify-content: center;
-  margin-top: 125px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 48px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
-.foto-karla img {
-  border-radius: 10px;
-  width: 600px;
-  margin-top: 125px;
-  border: 15px solid rgba(255, 255, 255, 0.28);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 40px 246px 0 rgba(0, 0, 0, 0.1);
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: white;
+  transition: var(--transition);
+}
+
+.logo strong {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.logo span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 2px;
+}
+
+.logo:hover {
+  opacity: 0.9;
+}
+
+.nav-links {
+  display: flex;
+  gap: 48px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 24px;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .nav-links {
+    gap: 32px;
+  }
 }
