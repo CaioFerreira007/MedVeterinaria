@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MobileMenu from "./MobileMenu";
-import { BUSINESS_INFO } from "../constants/businessinfo";
+import { BUSINESS_INFO } from "../constants/businessInfo";
 import "../styles/NavBar.css";
 
 const NavBar = () => {
