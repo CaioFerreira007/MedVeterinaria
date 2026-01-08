@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import MobileMenu from "./MobileMenu";
 import { BUSINESS_INFO } from "../constants/businessinfo";
 import "../styles/NavBar.css";
