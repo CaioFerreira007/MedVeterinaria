@@ -1,3 +1,8 @@
+/**
+ * NavBar Styles
+ * Navegação principal com scroll effect e responsividade
+ */
+
 .header {
   width: 100%;
   background: linear-gradient(
@@ -5,6 +10,16 @@
     var(--primary) 0%,
     var(--primary-dark) 100%
   );
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efeito de scroll - adiciona sombra */
+.header.is-scrolled {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  --backdrop-filter: blur(10px);
 }
 
 .navbar {
@@ -14,14 +29,28 @@
   padding: 24px 48px;
   max-width: 1400px;
   margin: 0 auto;
+  transition: padding 0.3s ease;
 }
 
+/* Padding reduzido ao rolar */
+.header.is-scrolled .navbar {
+  padding: 16px 48px;
+}
+
+/* ==================== LOGO ==================== */
 .logo {
   display: flex;
   flex-direction: column;
   text-decoration: none;
   color: white;
   transition: var(--transition);
+  z-index: 101;
+}
+
+.logo:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 .logo strong {
@@ -39,28 +68,33 @@
 
 .logo:hover {
   opacity: 0.9;
+  transform: translateY(-2px);
 }
 
+/* ==================== DESKTOP NAV LINKS ==================== */
 .nav-links {
   display: flex;
   gap: 48px;
   list-style: none;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links a {
+.nav-link {
   color: rgba(255, 255, 255, 0.95);
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
   transition: var(--transition);
   position: relative;
+  padding: 8px 0;
 }
 
-.nav-links a::after {
+.nav-link::after {
   content: "";
   position: absolute;
-  bottom: -4px;
+  bottom: 0;
   left: 0;
   width: 0;
   height: 2px;
@@ -68,22 +102,72 @@
   transition: var(--transition);
 }
 
-.nav-links a:hover {
+.nav-link:hover,
+.nav-link:focus {
   color: white;
+  outline: none;
 }
 
-.nav-links a:hover::after {
+.nav-link:hover::after,
+.nav-link:focus::after {
   width: 100%;
 }
 
+.nav-link:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ==================== RESPONSIVE ==================== */
 @media (max-width: 768px) {
   .navbar {
     padding: 20px 24px;
-    flex-direction: column;
-    gap: 24px;
   }
 
+  .header.is-scrolled .navbar {
+    padding: 16px 24px;
+  }
+
+  /* Esconde links desktop em mobile */
   .nav-links {
-    gap: 32px;
+    display: none;
+  }
+
+  .logo strong {
+    font-size: 1.25rem;
+  }
+
+  .logo span {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 769px) {
+  /* Esconde menu mobile em desktop */
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+/* Accessibility: High Contrast Mode */
+@media (prefers-contrast: high) {
+  .nav-link {
+    color: white;
+  }
+
+  .nav-link::after {
+    height: 3px;
+  }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .header,
+  .navbar,
+  .logo,
+  .nav-link,
+  .nav-link::after {
+    transition: none;
   }
 }

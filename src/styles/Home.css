@@ -1,3 +1,8 @@
+/**
+ * Home Page Styles
+ * Landing page com responsividade completa
+ */
+
 :root {
   --primary: #28574e;
   --primary-light: #3a6d62;
@@ -10,6 +15,8 @@
   --border: #e0e0e0;
   --bg-light: #f8f9fa;
   --bg-white: #ffffff;
+  --error: #dc2626;
+  --success: #16a34a;
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
@@ -20,6 +27,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .home {
@@ -64,6 +84,17 @@
     transparent 70%
   );
   border-radius: 50%;
+  animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(30px, 30px);
+  }
 }
 
 .hero .container {
@@ -77,6 +108,18 @@
 
 .hero-content {
   color: var(--bg-white);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-content h1 {
@@ -113,13 +156,21 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus {
   transform: translateY(-3px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 
 .hero-image {
   position: relative;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 .hero-image img {
@@ -128,28 +179,6 @@
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
-}
-
-.badge {
-  position: absolute;
-  background: var(--text-dark);
-  color: white;
-  padding: 14px 28px;
-  border-radius: 50px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-  white-space: nowrap;
-}
-
-.badge-left {
-  top: 40px;
-  left: -24px;
-}
-
-.badge-right {
-  bottom: 40px;
-  right: -24px;
 }
 
 /* ==================== ABOUT SECTION ==================== */
@@ -203,7 +232,8 @@
   border: 1px solid var(--border);
 }
 
-.service-card:hover {
+.service-card:hover,
+.service-card:focus-within {
   transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
   border-color: var(--primary);
@@ -215,6 +245,11 @@
   color: var(--primary);
   margin: 0 auto 28px;
   stroke-width: 1.5;
+  transition: var(--transition);
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
 }
 
 .service-card h3 {
@@ -243,9 +278,16 @@
   transition: var(--transition);
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-secondary:focus {
   background: var(--primary-dark);
   transform: scale(1.05);
+  outline: none;
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
 }
 
 /* ==================== CTA SECTION ==================== */
@@ -300,6 +342,7 @@
   align-items: center;
   gap: 12px;
   width: fit-content;
+  text-decoration: none;
 }
 
 .btn-cta svg {
@@ -307,9 +350,16 @@
   height: 20px;
 }
 
-.btn-cta:hover {
+.btn-cta:hover,
+.btn-cta:focus {
   transform: scale(1.05);
   box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+  outline: none;
+}
+
+.btn-cta:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 
 .cta-image img {
@@ -493,6 +543,18 @@
   color: var(--text-dark);
 }
 
+.contact-info dd a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.contact-info dd a:hover,
+.contact-info dd a:focus {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
 /* ==================== CONTACT FORM ==================== */
 .contact-form {
   background: var(--bg-light);
@@ -514,6 +576,10 @@
   margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 0.3px;
+}
+
+.contact-form label span {
+  color: var(--error);
 }
 
 .contact-form input,
@@ -538,6 +604,12 @@
   box-shadow: 0 0 0 3px rgba(40, 87, 78, 0.08);
 }
 
+.contact-form input[aria-invalid="true"],
+.contact-form select[aria-invalid="true"],
+.contact-form textarea[aria-invalid="true"] {
+  border-color: var(--error);
+}
+
 .contact-form textarea {
   resize: vertical;
   min-height: 120px;
@@ -557,10 +629,53 @@
   margin-top: 8px;
 }
 
-.btn-submit:hover {
+.btn-submit:hover:not(:disabled),
+.btn-submit:focus:not(:disabled) {
   background: var(--primary-dark);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(40, 87, 78, 0.25);
+  outline: none;
+}
+
+.btn-submit:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Mensagens de erro e sucesso */
+.error-message {
+  display: block;
+  color: var(--error);
+  font-size: 0.875rem;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+.success-message {
+  background: var(--success);
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 16px;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ==================== FOOTER ==================== */
@@ -602,8 +717,16 @@
   transition: var(--transition);
 }
 
-.footer-nav a:hover {
+.footer-nav a:hover,
+.footer-nav a:focus {
   color: var(--accent);
+  outline: none;
+}
+
+.footer-nav a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 .footer small {
@@ -690,5 +813,27 @@
   .footer-nav {
     flex-direction: column;
     gap: 16px;
+  }
+}
+
+/* ==================== ACCESSIBILITY ==================== */
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .btn-primary,
+  .btn-secondary,
+  .btn-cta,
+  .btn-submit {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

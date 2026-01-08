@@ -1,12 +1,14 @@
-import NavBar from "./components/NavBar";
+import { HelmetProvider } from "react-helmet-async";
 import Home from "./pages/Home";
+import "./styles/App.css";
 
 function App() {
   return (
-    <>
-      <NavBar />
-      <Home />
-    </>
+    <HelmetProvider>
+      <div className="app">
+        <Home />
+      </div>
+    </HelmetProvider>
   );
 }
 
