@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import SEOHead from "../components/SEOHead";
 import NavBar from "../components/NavBar";
-import { BUSINESS_INFO } from "../constants/businessinfo";
+import { BUSINESS_INFO } from "../constants/businessInfo";
 import { useContactForm } from "../hooks/usecontactform";
 import { getWhatsAppLink } from "../services/whatsappService";
 import "../styles/Home.css";
