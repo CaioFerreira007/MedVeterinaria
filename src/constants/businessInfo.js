@@ -12,8 +12,8 @@ export const BUSINESS_INFO = {
   experience: "10+ anos de experiência",
 
   // Contato
-  phone: "5521975901836", // ✅ Formato correto: 55 + DDD + número (SÓ NÚMEROS!)
-  phoneDisplay: "(21) 97590-1836", // Para exibição visual
+  phone: "5521975901836",
+  phoneDisplay: "(21) 97590-1836",
   email: "vetkarlabomfim@gmail.com",
 
   // Localização
