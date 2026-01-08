@@ -12,8 +12,8 @@ export const BUSINESS_INFO = {
   experience: "10+ anos de experiência",
 
   // Contato
-  phone: "5521 97590-1836", // Formato internacional para WhatsApp
-  phoneDisplay: "(21) 97590-1836",
+  phone: "5521975901836", // ✅ Formato correto: 55 + DDD + número (SÓ NÚMEROS!)
+  phoneDisplay: "(21) 97590-1836", // Para exibição visual
   email: "vetkarlabomfim@gmail.com",
 
   // Localização

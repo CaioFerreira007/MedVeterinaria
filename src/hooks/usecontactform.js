@@ -1,8 +1,3 @@
-/**
- * Custom Hook - useContactForm
- * Gerencia estado e lógica do formulário de contato
- */
-
 import { useState, useCallback } from "react";
 import { validateContactForm } from "../utils/validators";
 import { formatPhone } from "../utils/formatters";

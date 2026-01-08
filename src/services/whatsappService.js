@@ -1,4 +1,4 @@
-import { BUSINESS_INFO } from "../constants/businessInfo";
+import { BUSINESS_INFO } from "../constants/businessinfo";
 
 const formatAppointmentMessage = (formData) => {
   const { nome, telefone, pet, servico, mensagem } = formData;
