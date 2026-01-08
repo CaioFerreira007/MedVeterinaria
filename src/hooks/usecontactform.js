@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
-import { validateContactForm } from "../utils/validators";
-import { formatPhone } from "../utils/formatters";
+import { validateContactForm } from "../utils/Validators";
+import { formatPhone } from "../utils/Formatters";
 import { sendAppointmentMessage } from "../services/whatsappService";
 
 const INITIAL_FORM_STATE = {
