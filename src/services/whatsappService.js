@@ -1,4 +1,4 @@
-import { BUSINESS_INFO } from "../constants/businessInfo";
+import { BUSINESS_INFO } from "../constants/businessinfo";
 
 const formatAppointmentMessage = (formData) => {
   const { nome, telefone, pet, servico, mensagem } = formData;
@@ -73,7 +73,7 @@ export const isWhatsAppAvailable = () => {
   // Verifica se está em mobile
   const isMobile =
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
+      navigator.userAgent,
     );
 
   return isMobile;
@@ -86,7 +86,7 @@ export const openWhatsApp = (message = "") => {
     // Mobile: abre app WhatsApp
     const appUrl = message
       ? `whatsapp://send?phone=${BUSINESS_INFO.phone}&text=${encodeURIComponent(
-          message
+          message,
         )}`
       : `whatsapp://send?phone=${BUSINESS_INFO.phone}`;
 
@@ -109,7 +109,7 @@ export const openWhatsApp = (message = "") => {
 
 export const trackWhatsAppClick = (
   eventName = "whatsapp_click",
-  label = ""
+  label = "",
 ) => {
   if (typeof window !== "undefined" && window.gtag) {
     window.gtag("event", eventName, {
