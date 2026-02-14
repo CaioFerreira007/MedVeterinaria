@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import SEOHead from "../components/SEOHead";
 import NavBar from "../components/NavBar";
-import { BUSINESS_INFO } from "../constants/businessinfo";
-import { useContactForm } from "../hooks/usecontactform";
+import { BUSINESS_INFO } from "../constants/businessInfo";
+import { useContactForm } from "../hooks/useContactform";
 import { getWhatsAppLink } from "../services/whatsappService";
 import "../styles/Home.css";
 import FotoKarla from "../assets/_DSC1100.jpg";
