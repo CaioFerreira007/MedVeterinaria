@@ -2,7 +2,7 @@ import { useRef } from "react";
 import SEOHead from "../components/SEOHead";
 import NavBar from "../components/navbar";
 import { BUSINESS_INFO } from "../constants/businessinfo";
-import { useContactForm } from "../hooks/useContactForm";
+import { useContactForm } from "../hooks/usecontactform";
 import { getWhatsAppLink } from "../services/whatsappService";
 import "../styles/Home.css";
 import FotoKarla from "../assets/_DSC1100.jpg";

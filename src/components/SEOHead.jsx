@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { BUSINESS_INFO, SITE_INFO } from "../constants/businessinfo";
+import { BUSINESS_INFO, SITE_INFO } from "../constants/businessInfo";
 
 const SEOHead = ({
   title,
