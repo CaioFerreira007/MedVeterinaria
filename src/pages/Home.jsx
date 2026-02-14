@@ -2,15 +2,15 @@ import { useRef } from "react";
 import SEOHead from "../components/SEOHead";
 import NavBar from "../components/navbar";
 import { BUSINESS_INFO } from "../constants/businessinfo";
-import { useContactForm } from "../hooks/usecontactform";
+import { useContactForm } from "../hooks/useContactForm";
 import { getWhatsAppLink } from "../services/whatsappService";
 import "../styles/Home.css";
-import FotoKarla from "../assets/fotoKarla.jpg";
+import FotoKarla from "../assets/_DSC1100.jpg";
+import TumbFoto from "../assets/_DSC1124.jpg";
 
 function Home() {
   const contactRef = useRef(null);
 
-  // Custom hook para gerenciar formulário
   const {
     formData,
     errors,
@@ -20,7 +20,6 @@ function Home() {
     handleSubmit,
   } = useContactForm();
 
-  // Scroll suave para seção de contato
   const scrollToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -34,7 +33,6 @@ function Home() {
       <NavBar />
 
       <main className="home">
-        {/* ==================== HERO SECTION ==================== */}
         <section className="hero" aria-label="Apresentação">
           <div className="container">
             <article className="hero-content">
@@ -46,18 +44,24 @@ function Home() {
                 Atendimento domiciliar especializado com carinho, expertise e
                 toda a atenção que seu melhor amigo merece
               </p>
-              <button
-                onClick={scrollToContact}
-                className="btn-primary"
-                aria-label="Agendar consulta veterinária"
+              <a
+                href={getWhatsAppLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-cta"
+                aria-label="Agendar consulta via WhatsApp"
               >
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z" />
+                </svg>
                 Agendar Consulta
-              </button>
+              </a>
             </article>
 
             <figure className="hero-image">
               <img
                 src={FotoKarla}
+                className="fotoKarla"
                 alt="Dra. Karla - Veterinária especializada em atendimento domiciliar"
                 loading="eager"
                 width="520"
@@ -67,7 +71,6 @@ function Home() {
           </div>
         </section>
 
-        {/* ==================== ABOUT SECTION ==================== */}
         <section className="about" id="sobre" aria-labelledby="about-heading">
           <div className="container-small">
             <h2 id="about-heading">
@@ -87,7 +90,6 @@ function Home() {
           </div>
         </section>
 
-        {/* ==================== SERVICES SECTION ==================== */}
         <section
           className="services"
           id="servicos"
@@ -176,7 +178,6 @@ function Home() {
           </div>
         </section>
 
-        {/* ==================== CTA SECTION ==================== */}
         <section className="cta" aria-labelledby="cta-heading">
           <div className="container">
             <article className="cta-content">
@@ -197,7 +198,8 @@ function Home() {
             </article>
             <figure className="cta-image">
               <img
-                src={FotoKarla}
+                className="TumbFoto"
+                src={TumbFoto}
                 alt="Dra. Karla - Veterinária profissional"
                 loading="lazy"
                 width="550"
@@ -207,7 +209,6 @@ function Home() {
           </div>
         </section>
 
-        {/* ==================== CREDENTIALS SECTION ==================== */}
         <section className="credentials" aria-labelledby="credentials-heading">
           <div className="container">
             <h2 id="credentials-heading">
@@ -224,7 +225,6 @@ function Home() {
           </div>
         </section>
 
-        {/* ==================== TESTIMONIALS SECTION ==================== */}
         <section
           className="testimonials"
           id="depoimentos"
@@ -250,7 +250,6 @@ function Home() {
           </div>
         </section>
 
-        {/* ==================== CONTACT SECTION ==================== */}
         <section
           className="contact"
           id="contato"
@@ -464,7 +463,6 @@ function Home() {
           </div>
         </section>
 
-        {/* ==================== FOOTER ==================== */}
         <footer className="footer" role="contentinfo">
           <div className="container">
             <section className="footer-info">

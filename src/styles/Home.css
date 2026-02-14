@@ -1,8 +1,3 @@
-/**
- * Home Page Styles
- * Landing page com responsividade completa
- */
-
 :root {
   --primary: #28574e;
   --primary-light: #3a6d62;
@@ -29,7 +24,6 @@
   box-sizing: border-box;
 }
 
-/* Screen reader only */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -48,9 +42,10 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 24px;
+  height: max-content;
 }
 
 .container-small {
@@ -59,7 +54,13 @@
   padding: 0 24px;
 }
 
-/* ==================== HERO SECTION ==================== */
+.container .TumbFoto {
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
+  height: 520px;
+}
+
 .hero {
   background: linear-gradient(
     135deg,
@@ -109,6 +110,7 @@
 .hero-content {
   color: var(--bg-white);
   animation: fadeInUp 0.8s ease-out;
+  text-align: center;
 }
 
 @keyframes fadeInUp {
@@ -127,6 +129,7 @@
   font-weight: 700;
   line-height: 1.15;
   margin-bottom: 28px;
+  text-align: center;
 }
 
 .hero-content .highlight {
@@ -141,6 +144,9 @@
   color: rgba(255, 255, 255, 0.92);
   margin-bottom: 40px;
   max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .btn-primary {
@@ -154,6 +160,9 @@
   cursor: pointer;
   transition: var(--transition);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
 }
 
 .btn-primary:hover,
@@ -171,6 +180,7 @@
 .hero-image {
   position: relative;
   animation: fadeInUp 0.8s ease-out 0.2s both;
+  padding-bottom: 40px;
 }
 
 .hero-image img {
@@ -181,7 +191,6 @@
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
 }
 
-/* ==================== ABOUT SECTION ==================== */
 .about {
   padding: 120px 0;
   background: var(--bg-white);
@@ -210,7 +219,6 @@
   margin: 0 auto;
 }
 
-/* ==================== SERVICES SECTION ==================== */
 .services {
   padding: 120px 0;
   background: var(--bg-light);
@@ -290,7 +298,6 @@
   outline-offset: 4px;
 }
 
-/* ==================== CTA SECTION ==================== */
 .cta {
   padding: 120px 0;
   background: var(--bg-white);
@@ -368,7 +375,6 @@
   object-fit: cover;
 }
 
-/* ==================== CREDENTIALS SECTION ==================== */
 .credentials {
   padding: 100px 0;
   background: var(--bg-white);
@@ -423,7 +429,6 @@
   line-height: 1.4;
 }
 
-/* ==================== TESTIMONIALS SECTION ==================== */
 .testimonials {
   padding: 120px 0;
   background: var(--bg-light);
@@ -490,7 +495,6 @@
   color: var(--text-light);
 }
 
-/* ==================== CONTACT SECTION ==================== */
 .contact {
   padding: 120px 0;
   background: var(--bg-white);
@@ -555,7 +559,6 @@
   text-decoration: underline;
 }
 
-/* ==================== CONTACT FORM ==================== */
 .contact-form {
   background: var(--bg-light);
   padding: 44px;
@@ -647,7 +650,6 @@
   cursor: not-allowed;
 }
 
-/* Mensagens de erro e sucesso */
 .error-message {
   display: block;
   color: var(--error);
@@ -678,7 +680,6 @@
   }
 }
 
-/* ==================== FOOTER ==================== */
 .footer {
   background: var(--text-dark);
   color: white;
@@ -738,7 +739,6 @@
   color: rgba(255, 255, 255, 0.65);
 }
 
-/* ==================== RESPONSIVE ==================== */
 @media (max-width: 1024px) {
   .hero .container {
     grid-template-columns: 1fr;
@@ -755,6 +755,7 @@
 
   .cta .container {
     grid-template-columns: 1fr;
+    height: 1200px;
   }
 
   .cta-image {
@@ -816,8 +817,6 @@
   }
 }
 
-/* ==================== ACCESSIBILITY ==================== */
-/* High contrast mode */
 @media (prefers-contrast: high) {
   .btn-primary,
   .btn-secondary,
@@ -827,7 +826,6 @@
   }
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

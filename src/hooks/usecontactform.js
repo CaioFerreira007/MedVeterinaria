@@ -17,9 +17,8 @@ export const useContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  /**
-   * Atualiza campo do formulário
-   */
+  // Atualiza campo do formulário
+
   const handleChange = useCallback(
     (e) => {
       const { name, value } = e.target;
@@ -45,12 +44,11 @@ export const useContactForm = () => {
         }));
       }
     },
-    [errors]
+    [errors],
   );
 
-  /**
-   * Valida e submete formulário
-   */
+  //  Valida e submete formulário
+
   const handleSubmit = useCallback(
     async (e) => {
       e.preventDefault();
@@ -96,12 +94,11 @@ export const useContactForm = () => {
         setIsSubmitting(false);
       }
     },
-    [formData]
+    [formData],
   );
 
-  /**
-   * Reseta formulário
-   */
+  // Reseta formulário
+
   const resetForm = useCallback(() => {
     setFormData(INITIAL_FORM_STATE);
     setErrors({});
@@ -109,9 +106,8 @@ export const useContactForm = () => {
     setSubmitSuccess(false);
   }, []);
 
-  /**
-   * Valida campo individual (para validação em tempo real)
-   */
+  // Valida campo individual (para validação em tempo real)
+
   const validateField = useCallback(
     (fieldName) => {
       const validation = validateContactForm(formData);
@@ -131,7 +127,7 @@ export const useContactForm = () => {
         return true;
       }
     },
-    [formData]
+    [formData],
   );
 
   return {
