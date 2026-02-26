@@ -82,10 +82,9 @@ function Home() {
             </h2>
             <p>
               Descubra a excelência do atendimento veterinário domiciliar, onde
-              qualidade, pesquisa de ponta e uma equipe de especialistas se unem
-              para proporcionar a melhor experiência veterinária.{" "}
-              {BUSINESS_INFO.shortName} é sua parceira dedicada, guiando você em
-              direção à saúde e bem-estar do seu pet.
+              qualidade e pesquisa de ponta se unem para proporcionar a melhor
+              experiência veterinária. {BUSINESS_INFO.shortName} é sua parceira
+              dedicada, guiando você em direção à saúde e bem-estar do seu pet.
             </p>
           </div>
         </section>

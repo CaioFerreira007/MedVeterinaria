@@ -16,7 +16,6 @@ const SEOHead = ({
   const pageCanonical = canonical || SITE_INFO.canonicalUrl;
   const pageImage = ogImage || `${SITE_INFO.url}/og-image.jpg`;
 
-  // Schema.org
   const schemaLocalBusiness = {
     "@context": "https://schema.org",
     "@type": "VeterinaryCare",
@@ -69,7 +68,6 @@ const SEOHead = ({
     },
   };
 
-  // Schema.org
   const schemaProfessional = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -101,7 +99,6 @@ const SEOHead = ({
     ],
   };
 
-  // Schema.org
   const schemaOrganization = {
     "@context": "https://schema.org",
     "@type": "Organization",

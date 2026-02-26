@@ -24,9 +24,6 @@ export const validatePhone = (phone) => {
   return true;
 };
 
-/**
- * Valida email
- */
 export const validateEmail = (email) => {
   if (!email) return false;
 
@@ -34,16 +31,10 @@ export const validateEmail = (email) => {
   return emailRegex.test(email);
 };
 
-/**
- * Valida se campo não está vazio
- */
 export const validateRequired = (value) => {
   return value && value.trim().length > 0;
 };
 
-/**
- * Valida nome (mínimo 3 caracteres, apenas letras e espaços)
- */
 export const validateName = (name) => {
   if (!name || name.trim().length < 3) return false;
 
@@ -52,9 +43,6 @@ export const validateName = (name) => {
   return nameRegex.test(name);
 };
 
-/**
- * Valida nome do pet (mínimo 2 caracteres)
- */
 export const validatePetName = (name) => {
   if (!name || name.trim().length < 2) return false;
 
@@ -63,16 +51,10 @@ export const validatePetName = (name) => {
   return petNameRegex.test(name);
 };
 
-/**
- * Valida mensagem (mínimo 10 caracteres)
- */
 export const validateMessage = (message) => {
   return message && message.trim().length >= 10;
 };
 
-/**
- * Valida formulário completo de contato
- */
 export const validateContactForm = (formData) => {
   const errors = {};
 

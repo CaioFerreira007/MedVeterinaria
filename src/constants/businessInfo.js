@@ -7,9 +7,9 @@ export const BUSINESS_INFO = {
     "Atendimento veterinário domiciliar especializado no Rio de Janeiro. Consultas, vacinação e tratamentos no conforto do seu lar com profissionalismo e carinho.",
 
   // Credenciais
-  crmv: "CRMV-RJ 12345",
+  crmv: "CRMV-RJ 15941",
   specialization: "Clínica Geral",
-  experience: "10+ anos de experiência",
+  experience: "3+ anos de experiência",
 
   // Contato
   phone: "5521975901836",
@@ -18,7 +18,7 @@ export const BUSINESS_INFO = {
 
   // Localização
   serviceArea: "Rio de Janeiro e Região Metropolitana",
-  city: "Rio de Janeiro",
+  city: "Duque de Caxias",
   state: "RJ",
   stateCode: "RJ",
   country: "Brasil",
@@ -26,21 +26,18 @@ export const BUSINESS_INFO = {
 
   // Coordenadas (Centro do RJ - ajustar para localização real)
   coordinates: {
-    latitude: "-22.9068",
-    longitude: "-43.1729",
+    latitude: -22.7856,
+    longitude: -43.3117,
   },
-
   // Horários
   hours: {
     display: "Segunda a Sábado - 8h às 18h",
     structured: "Mo-Sa 08:00-18:00", // Formato Schema.org
   },
 
-  // Redes Sociais (adicionar se existir)
   social: {
     instagram: "https://instagram.com/drakarlavet",
     facebook: "https://facebook.com/drakarlavet",
-    // whatsapp já está acima
   },
 
   // SEO
@@ -72,7 +69,7 @@ export const BUSINESS_INFO = {
       icon: "syringe",
     },
     {
-      id: "tratamento",
+      id: "tratamentos",
       name: "Tratamentos",
       description:
         "Acompanhamento de doenças crônicas, medicações contínuas e cuidados especializados com todo conforto.",
@@ -86,17 +83,23 @@ export const BUSINESS_INFO = {
       icon: "clipboard",
     },
     {
-      id: "emergencia",
-      name: "Emergência",
+      id: "microchipagem",
+      name: "Microchipagem",
       description:
-        "Atendimento urgente para situações que requerem cuidado imediato.",
-      icon: "ambulance",
+        "Implantação de microchip para identificação e segurança do seu pet.",
+      icon: "chip",
+    },
+    {
+      id: "parceria",
+      name: "Parceria",
+      description: "Programas de parceria com especialidades a domicílio.",
+      icon: "handshake",
     },
   ],
 
   // Credenciais para exibição
   credentials: [
-    { label: "CRMV-RJ", value: "12345" },
+    { label: "CRMV-RJ", value: "15941" },
     { label: "Especialização", value: "Clínica Geral" },
     { label: "Atendimento", value: "Humanizado" },
     { label: "Especialista", value: "Home Care" },
@@ -108,28 +111,69 @@ export const BUSINESS_INFO = {
   testimonials: [
     {
       id: 1,
-      author: "Maria Silva",
-      pet: "Rex",
-      text: "A Dra. Karla é excepcional! Meu cachorro era muito ansioso em clínicas, mas com o atendimento em casa ficou tranquilo e super confortável. Recomendo demais!",
+      author: "Lucas Tiaho Bomfim",
+      pet: "Papagaio",
+      text: "Excelente atendimento. A Dra. Karla salvou a vida do meu papagaio… ele estava muito triste e sem penas, mas com a ajuda dela agora ele está alegre e feliz. Sou muito grato!!!! É emocionante ver o amor e o carinho com que a dra trata os nossos filhos.",
       rating: 5,
     },
     {
       id: 2,
-      author: "João Santos",
-      pet: "Mimi",
-      text: "Profissional extremamente competente e atenciosa. Cuida da minha gatinha como se fosse dela. O atendimento domiciliar fez toda diferença!",
+      author: "Prycila Carvalho",
+      pet: "Pet",
+      text: "Atenciosa, cuidadosa, carinhosa, uma profissional excelente... isso define o atendimento da Doutora Karla. Maravilhosa, super indico!",
       rating: 5,
     },
     {
       id: 3,
-      author: "Ana Paula",
-      pet: "Bob",
-      text: "Praticidade, cuidado e profissionalismo em um só lugar. Não troco o atendimento domiciliar da Dra. Karla por nada. Meu pet agradece!",
+      author: "Rafaella Arvelos",
+      pet: "Pet",
+      text: "Excelente profissional, admiro muito todo cuidado e amor com os animais, recomendo muito marcar uma consulta!",
+      rating: 5,
+    },
+    {
+      id: 4,
+      author: "Mariangela Ferreira",
+      pet: "Pet",
+      text: "Bom atendimento, pontual, atenciosa, uma boa veterinária. Recomendo!",
+      rating: 5,
+    },
+    {
+      id: 5,
+      author: "Maicon Silva",
+      pet: "Cachorro",
+      text: "Tratou muito bem do meu dog, muito obrigado por esse carinho!",
+      rating: 5,
+    },
+    {
+      id: 6,
+      author: "Vivian Von Held",
+      pet: "Pet",
+      text: "Muito profissional e assertiva em seus diagnósticos. Nota 1000!",
+      rating: 5,
+    },
+    {
+      id: 7,
+      author: "Caio Gustavo",
+      pet: "Cachorro",
+      text: "Excelente atendimento, muito gentil e cuidadosa com o meu cachorro. Ele sofreu uma lesão em uma de suas patinhas e dentro de poucas semanas já estava andando bem melhor. Muito obrigado pelo excelente profissionalismo!",
+      rating: 5,
+    },
+    {
+      id: 8,
+      author: "Tay Silva",
+      pet: "Pet",
+      text: "Excelente profissional, cuidou do meu pet com todo amor e carinho. Profissional capacitada, descobriu o problema e com a indicação certa obtivemos ótimos resultados!! 10x10. Super indicooooo!",
+      rating: 5,
+    },
+    {
+      id: 9,
+      author: "Amanda Mello",
+      pet: "Cachorra e Gato",
+      text: "A Dra. Karla é uma excelente profissional, atenciosa e muito carinhosa com nossos bichinhos. Está sempre pronta a ajudar e a tirar nossas dúvidas. Somos muito gratos pelo carinho e cuidado que ela tem com nossa cachorrinha e nosso gato.",
       rating: 5,
     },
   ],
 
-  // FAQ (pode ser adicionado posteriormente)
   faq: [
     {
       question: "Qual a área de atendimento?",
@@ -153,16 +197,14 @@ export const BUSINESS_INFO = {
   ],
 };
 
-// URLs e Links (adicionar domínio real quando disponível)
 export const SITE_INFO = {
-  url: "https://drakarlavet.com.br", // Substituir pelo domínio real
+  url: "https://drakarlavet.com.br",
   canonicalUrl: "https://drakarlavet.com.br",
-  logo: "/logo.png", // Adicionar logo se existir
+  logo: "/logo.png",
   favicon: "/favicon.ico",
-  ogImage: "/og-image.jpg", // Imagem para compartilhamento (1200x630px)
+  ogImage: "/og-image.jpg",
 };
 
-// Cores do tema (sincronizado com CSS)
 export const THEME_COLORS = {
   primary: "#28574e",
   primaryLight: "#3a6d62",
