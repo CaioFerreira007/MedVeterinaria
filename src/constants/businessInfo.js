@@ -9,7 +9,7 @@ export const BUSINESS_INFO = {
   // Credenciais
   crmv: "CRMV-RJ 15941",
   specialization: "Clínica Geral",
-  experience: "4+ anos de experiência",
+  experience: "3+ anos de experiência",
 
   // Contato
   phone: "5521975901836",
@@ -35,11 +35,9 @@ export const BUSINESS_INFO = {
     structured: "Mo-Sa 08:00-18:00", // Formato Schema.org
   },
 
-  // Redes Sociais (adicionar se existir)
   social: {
     instagram: "https://instagram.com/drakarlavet",
     facebook: "https://facebook.com/drakarlavet",
-    // whatsapp já está acima
   },
 
   // SEO
@@ -71,7 +69,7 @@ export const BUSINESS_INFO = {
       icon: "syringe",
     },
     {
-      id: "tratamento",
+      id: "tratamentos",
       name: "Tratamentos",
       description:
         "Acompanhamento de doenças crônicas, medicações contínuas e cuidados especializados com todo conforto.",
@@ -85,11 +83,17 @@ export const BUSINESS_INFO = {
       icon: "clipboard",
     },
     {
-      id: "emergencia",
-      name: "Emergência",
+      id: "microchipagem",
+      name: "Microchipagem",
       description:
-        "Atendimento urgente para situações que requerem cuidado imediato.",
-      icon: "ambulance",
+        "Implantação de microchip para identificação e segurança do seu pet.",
+      icon: "chip",
+    },
+    {
+      id: "parceria",
+      name: "Parceria",
+      description: "Programas de parceria com especialidades a domicílio.",
+      icon: "handshake",
     },
   ],
 
@@ -107,23 +111,65 @@ export const BUSINESS_INFO = {
   testimonials: [
     {
       id: 1,
-      author: "Maria Silva",
-      pet: "Rex",
-      text: "A Dra. Karla é excepcional! Meu cachorro era muito ansioso em clínicas, mas com o atendimento em casa ficou tranquilo e super confortável. Recomendo demais!",
+      author: "Lucas Tiaho Bomfim",
+      pet: "Papagaio",
+      text: "Excelente atendimento. A Dra. Karla salvou a vida do meu papagaio… ele estava muito triste e sem penas, mas com a ajuda dela agora ele está alegre e feliz. Sou muito grato!!!! É emocionante ver o amor e o carinho com que a dra trata os nossos filhos.",
       rating: 5,
     },
     {
       id: 2,
-      author: "João Santos",
-      pet: "Mimi",
-      text: "Profissional extremamente competente e atenciosa. Cuida da minha gatinha como se fosse dela. O atendimento domiciliar fez toda diferença!",
+      author: "Prycila Carvalho",
+      pet: "Pet",
+      text: "Atenciosa, cuidadosa, carinhosa, uma profissional excelente... isso define o atendimento da Doutora Karla. Maravilhosa, super indico!",
       rating: 5,
     },
     {
       id: 3,
-      author: "Ana Paula",
-      pet: "Bob",
-      text: "Praticidade, cuidado e profissionalismo em um só lugar. Não troco o atendimento domiciliar da Dra. Karla por nada. Meu pet agradece!",
+      author: "Rafaella Arvelos",
+      pet: "Pet",
+      text: "Excelente profissional, admiro muito todo cuidado e amor com os animais, recomendo muito marcar uma consulta!",
+      rating: 5,
+    },
+    {
+      id: 4,
+      author: "Mariangela Ferreira",
+      pet: "Pet",
+      text: "Bom atendimento, pontual, atenciosa, uma boa veterinária. Recomendo!",
+      rating: 5,
+    },
+    {
+      id: 5,
+      author: "Maicon Silva",
+      pet: "Cachorro",
+      text: "Tratou muito bem do meu dog, muito obrigado por esse carinho!",
+      rating: 5,
+    },
+    {
+      id: 6,
+      author: "Vivian Von Held",
+      pet: "Pet",
+      text: "Muito profissional e assertiva em seus diagnósticos. Nota 1000!",
+      rating: 5,
+    },
+    {
+      id: 7,
+      author: "Caio Gustavo",
+      pet: "Cachorro",
+      text: "Excelente atendimento, muito gentil e cuidadosa com o meu cachorro. Ele sofreu uma lesão em uma de suas patinhas e dentro de poucas semanas já estava andando bem melhor. Muito obrigado pelo excelente profissionalismo!",
+      rating: 5,
+    },
+    {
+      id: 8,
+      author: "Tay Silva",
+      pet: "Pet",
+      text: "Excelente profissional, cuidou do meu pet com todo amor e carinho. Profissional capacitada, descobriu o problema e com a indicação certa obtivemos ótimos resultados!! 10x10. Super indicooooo!",
+      rating: 5,
+    },
+    {
+      id: 9,
+      author: "Amanda Mello",
+      pet: "Cachorra e Gato",
+      text: "A Dra. Karla é uma excelente profissional, atenciosa e muito carinhosa com nossos bichinhos. Está sempre pronta a ajudar e a tirar nossas dúvidas. Somos muito gratos pelo carinho e cuidado que ela tem com nossa cachorrinha e nosso gato.",
       rating: 5,
     },
   ],
